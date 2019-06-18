@@ -46,8 +46,8 @@ templatesDirectories.forEach((folder) => {
       }
    }));
 
-   console.log('\x1b[32m%s\x1b[0m', 'Email deployment file generated for ' + config.name);
+   console.log('\x1b[32m%s\x1b[0m', `Email deployment file generated for ${config.name}`);
    console.log('\x1b[33m%s\x1b[0m', 'Create or update AWS SES template with any of the following commands:');
-   console.log('aws ses create-template --cli-input-json file://' + __dirname + '/' + folderObj.name + '/deploy.json');
-   console.log('aws ses update-template --cli-input-json file://' + __dirname + '/' + folderObj.name + '/deploy.json');
+   console.log(`aws ses create-template --cli-input-json file://${__dirname}/templates/${folderObj.name}/deploy.json`);
+   console.log(`aws ses update-template --cli-input-json file://${__dirname}/templates/${folderObj.name}/deploy.json`);
 });
