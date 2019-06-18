@@ -5,7 +5,7 @@ const isDirectory = (source) => lstatSync(source).isDirectory();
 const isFile = (source) => lstatSync(source).isFile();
 const getDirectories = (source) => readdirSync(source).map(name => join(source, name)).filter(isDirectory);
 const getFiles = (source) => readdirSync(source).map(name => join(source, name)).filter(isFile);
-const encodeHtml = (html) => html/*.replace(/"/g, '\"')*/.replace(/(\r\n|\n|\r)/gm, ' ');
+const encodeHtml = (html) => html.replace(/(\r\n|\n|\r)/gm, ' ');
 
 const templatesDirectories = getDirectories('templates');
 
