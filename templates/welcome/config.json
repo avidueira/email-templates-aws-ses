@@ -1,0 +1,5 @@
+{
+  "name": "welcome",
+  "subject": "Hey {{name}}! Welcome to {{app}}!",
+  "text": "Hey {{name}}! Welcome!"
+}
